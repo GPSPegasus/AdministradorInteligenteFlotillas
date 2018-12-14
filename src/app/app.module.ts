@@ -14,6 +14,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CreateVehicleOwnerComponent } from './create-vehicle-owner/create-vehicle-owner.component';
 
+import { MatSidenavModule, MatInputModule} from  '@angular/material';
+
 const appRoutes: Routes = [
     { path: '', component: LoginComponent },
     { path: 'home', component: HomeComponent },
@@ -34,7 +36,9 @@ const appRoutes: Routes = [
         ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
         BrowserAnimationsModule,
         FormsModule,
-        RouterModule.forRoot(appRoutes)
+        RouterModule.forRoot(appRoutes),
+        MatSidenavModule,
+        MatInputModule
     ],
     providers: [],
     bootstrap: [AppComponent]
