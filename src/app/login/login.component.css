@@ -1,0 +1,121 @@
+.container{
+    position: absolute;
+    background-color:#212121;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;;
+}
+.container-login-desk{
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width:65%;
+    height:55%;
+}
+
+.container-login-mobile{
+    position: relative;
+    background-color: #424242;
+    display: none;
+    margin-left: 10%;
+    margin-top: 40px;
+    width:80%;
+    height:85%; 
+}
+
+.logo{
+    position: relative;
+    background-color: #424242;
+    width: 60%;
+}
+
+.login{
+    padding: 40px 40px 40px 40px;
+    width: 40%;
+    background-color: #00E676;
+}
+
+.img{
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+}
+
+
+mat-form-field{
+    color: white;
+    margin-top: 100px;
+    display: block;
+    font-size: 22px;
+    height: 40px;
+}
+
+button{
+    position: absolute;
+    font-size: 22px;
+    cursor: pointer;
+    border: 0px;
+    border-radius: 5px;
+    bottom: 40px;
+    height: 35px;
+    width: 200px;
+}
+
+@media only screen and (max-width:900px) {
+    .container-login-desk{
+        display: none;
+    }
+
+    .container-login-mobile{
+        display: block;
+    }
+
+    .logo{
+        background-color: transparent;
+        width: 90%;
+    }
+
+    .img{
+        top: 40%;
+        left: 53%;
+        width: 80%;
+        margin-top: 50px;
+    }
+
+    .login{
+        position: absolute;
+        width: 60%;
+        height: 50%;
+        top: 55%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+
+    mat-form-field{
+        font-size: 20px;
+        text-align: center;
+        margin-top: 60px;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    button{
+        bottom: 5px;
+        width: 90%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+
+}
