@@ -14,7 +14,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CreateVehicleOwnerComponent } from './create-vehicle-owner/create-vehicle-owner.component';
 
-import { MatSidenavModule, MatInputModule} from  '@angular/material';
+import { MatSidenavModule, MatInputModule, MatExpansionModule} from  '@angular/material';
 
 const appRoutes: Routes = [
     { path: '', component: LoginComponent },
@@ -38,6 +38,7 @@ const appRoutes: Routes = [
         FormsModule,
         RouterModule.forRoot(appRoutes),
         MatSidenavModule,
+        MatExpansionModule,
         MatInputModule
     ],
     providers: [],
