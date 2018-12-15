@@ -1,32 +1,22 @@
-<div class="container" >
-  <div class="container-login-desk">
-    <div class="logo">
-      <img mat-card-image class="img" src="assets/img/logo.png">
-    </div>
-    <div class="login">
-        <h1>Iniciar Sesión</h1>
-        <mat-form-field style="margin-top: 40px;">
-          <input matInput placeholder="Gmail"  required> 
-        </mat-form-field>
-        <mat-form-field >
-          <input matInput placeholder="Password" type="password" required>
-        </mat-form-field>
-        <button mat-button>Entrar</button>
-    </div>
-  </div>
-  <div class="container-login-mobile">
+<mat-drawer-container class="container">
+  <mat-drawer mode="side"opened>
+    <div class="container-login-desk" >
       <div class="logo">
-        <img mat-card-image class="img" src="assets/img/logo.png">
+        <img mat-card-image  class="img" src="assets/img/logo.png">
       </div>
       <div class="login">
-          <h1>Iniciar Sesión</h1>
-          <mat-form-field style="margin-top: 40px;">
-            <input matInput placeholder="Gmail"  required> 
-          </mat-form-field>
-          <mat-form-field >
-            <input matInput placeholder="Password" type="password" required>
-          </mat-form-field>
+        <mat-form-field style="margin-top: 40px;">
+          <input matInput placeholder="Email" required> 
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Password" type="password" required> 
+        </mat-form-field>
+        <button mat-button>Entrar</button>
       </div>
-      <button mat-button>Entrar</button>
-  </div>
-</div>
+     
+    </div>
+  </mat-drawer>
+  <mat-drawer-content >
+    <img mat-card-image  class="img-otherSide" src="assets/img/localizar2.jpg">
+  </mat-drawer-content>
+</mat-drawer-container>
