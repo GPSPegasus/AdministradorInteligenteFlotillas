@@ -1,6 +1,6 @@
 *{
     font-family: 'Open Sans', sans-serif;
-    color: #E0E0E0;
+    color: #424242;
 }
 
 .container{
@@ -12,125 +12,97 @@
     left: 0px;;
 }
 .container-login-desk{
-    position: absolute;
-    display: flex;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    width:65%;
-    height:55%;
+    position: relative;
+    margin-top: 30%;
+    width: 500px;
+    height: 60%;
 }
 
-.container-login-mobile{
-    position: relative;
-    background-color: #424242;
-    display: none;
-    margin-left: 10%;
-    margin-top: 40px;
-    width:80%;
-    height:85%; 
+mat-drawer{
+    background-color:#058E8E;
 }
+
 
 .logo{
     position: relative;
-    background-color: #424242;
-    width: 60%;
+    text-align: center;
+    width: 100%;
 }
 
 .login{
-    padding: 40px 40px 40px 40px;
-    width: 40%;
-    background-color: #00E676;
+    display: block;
+    text-align: center;
+    height: 60%;
 }
-
-.img{
+.otherSide{
     position: absolute;
-    display: flex;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    width: 60%;
+    background-color: #E0E0E0;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
 }
 
+.img-otherSide{
+    text-align: center;
+    background-position:center;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+}
 
 mat-form-field{
     color: white;
-    margin-top: 50px;
-    display: block;
+    margin-top: 80px;
+    text-align: center;
     font-size: 22px;
+    width: 80%;
     height: 40px;
 }
 
 button{
-    background-color: #E0E0E0;
-    color: black;
+    background-color: #2E8EC5;
+    color: white;
     position: absolute;
-    font-size: 22px;
-    cursor: pointer;
+    font-size: 20px;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 60%;
+
     border: 0px;
-    border-radius: 5px;
-    bottom: 20px;
-    height: 35px;
-    width: 200px;
+    border-radius: 20px;
+    padding: 10px 10px 10px 10px;
+
 }
 
 button:active {
-    transform: translateY(4px);
+    transform: translate(-50%, 6px);
 }
 
 button:focus {outline:0;}
 
-@media only screen and (max-width:900px) {
-    .container-login-desk{
-        display: none;
-    }
 
-    .container-login-mobile{
-        display: block;
-    }
+.input{
+    border-style: solid;
+    border-color: #212121;
+    border-width: 5px;
+}
 
-    .logo{
-        background-color: transparent;
-        width: 90%;
-    }
-
-    .img{
-        top: 40%;
-        left: 53%;
-        width: 80%;
-        margin-top: 50px;
-    }
-
-    .login{
+@media only screen and (max-width:800px) {
+    mat-drawer{
         position: absolute;
-        width: 60%;
-        height: 50%;
-        top: 55%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
+        left: 0px;
+        right: 0px;
     }
 
-    mat-form-field{
-        font-size: 18px;
-        text-align: center;
-        margin-top: 60px;
-    }
-
-    h1{
-        text-align: center;
-        font-size: 25px;
+    .container-login-desk{
+        margin-top: 20%;
+        width: 100%;
     }
 
     button{
-        text-align: center;
-        margin-left: 20%;
-        margin-bottom: 20px;
-        bottom: 5px;
-        width: 60%;
-
+        bottom: -80px;
     }
 
 }
