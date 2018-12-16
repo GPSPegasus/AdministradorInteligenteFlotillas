@@ -41,13 +41,10 @@ const appRoutes: Routes = [
         MatSidenavModule,
         MatExpansionModule,
         MatInputModule,
-<<<<<<< HEAD
         HttpClientModule
-=======
         MatMenuModule,
         MatToolbarModule,
         MatIconModule
->>>>>>> origin/devFronted
     ],
     providers: [],
     bootstrap: [AppComponent]

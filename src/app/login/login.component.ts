@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
 	remember_me: boolean = true;
 
 	constructor(private userService: UserService, private router: Router) { 
-		if(localStorage.getItem('session')) {
+		if(localStorage.getItem('access_token')) {
 			this.router.navigate(['home']);
 		}
 	}
@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
 		this.userService.getSession(this.email, this.password, this.remember_me)
 		.subscribe(
 			(response: any) => { 
-				localStorage.setItem('session', response);
+				localStorage.setItem('access_token', response.access_token);
 				this.router.navigate(['home']);
 			}, 
 			(error: any) => { 
