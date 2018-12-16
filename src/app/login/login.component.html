@@ -1,22 +1,21 @@
 <mat-drawer-container class="container">
-  <mat-drawer mode="side"opened>
-    <div class="container-login-desk" >
-      <div class="logo">
-        <img mat-card-image  class="img" src="assets/img/logo.png">
-      </div>
-      <div class="login">
-        <mat-form-field style="margin-top: 40px;">
-          <input matInput placeholder="Email" required> 
-        </mat-form-field>
-        <mat-form-field>
-          <input matInput placeholder="Password" type="password" required> 
-        </mat-form-field>
-        <button mat-button>Entrar</button>
-      </div>
-     
-    </div>
-  </mat-drawer>
-  <mat-drawer-content >
-    <img mat-card-image  class="img-otherSide" src="assets/img/localizar2.jpg">
-  </mat-drawer-content>
+    <mat-drawer mode="side"opened>
+        <div class="container-login-desk" >
+            <div class="logo">
+                <img mat-card-image  class="img" src="assets/images/logo.png">
+            </div>
+            <div class="login">
+                <mat-form-field style="margin-top: 40px;">
+                    <input matInput placeholder="Email" required [(ngModel)]="email"> 
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Password" type="password" required [(ngModel)]="password"> 
+                </mat-form-field>
+                <button mat-button (click)="logIn()">Entrar</button>
+            </div> 
+        </div>
+    </mat-drawer>
+    <mat-drawer-content >
+        <img mat-card-image  class="img-otherSide" src="assets/images/localizar2.jpg">
+    </mat-drawer-content>
 </mat-drawer-container>

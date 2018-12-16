@@ -47,20 +47,20 @@ mat-form-field{
     background-color: #E0E0E0;
 }
 
-.btn-add-vehicle:active {
+.btn-add-vehicle:active{
     background-color:#00E676;
     transform: translateY(4px);
 }
 
-button:focus {outline:0;}
+button:focus{
+    outline:0;
+}
 
 .btn-options{
     cursor: pointer;
-
     width: 100% !important;
     margin-left: 0px !important;
     margin-top: 5px !important;
-
     border:0px;
     padding: 5px 5px 5px 5px;
     background-color: #E0E0E0;
@@ -75,6 +75,6 @@ mat-expansion-panel{
     background-color: #424242;;
 }
 
-mat-drawer {
+mat-drawer{
     background-color: #212121;
 }
