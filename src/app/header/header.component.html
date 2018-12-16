@@ -1,3 +1,34 @@
-<p>
-  header works!
-</p>
+<mat-toolbar>
+    <div class="options" [matMenuTriggerFor]="options">
+        <mat-icon style="font-size:50px" id="menu" >menu</mat-icon>
+    </div>
+    <img mat-card-image routerLink="/" routerLinkActive="active" class="img" src="assets/images/logo.png">
+</mat-toolbar>
+
+<mat-menu #options="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="Owner">Usuario</button>
+    <button mat-menu-item [matMenuTriggerFor]="Vehicle">Vehiculo</button>
+    <button mat-menu-item [matMenuTriggerFor]="Group">Grupo</button>
+    <button mat-menu-item [matMenuTriggerFor]="Card">Tarjetas RFID</button>
+    <button mat-menu-item>Graficas</button>
+</mat-menu>
+
+<mat-menu #Owner="matMenu">
+    <button mat-menu-item>Agregar propietario</button>
+    <button mat-menu-item>Visualizar propietarios</button>
+</mat-menu>
+
+<mat-menu #Vehicle="matMenu">
+    <button mat-menu-item>Agregar un vehiculo</button>
+    <button mat-menu-item>Visualizar vehiculos</button>
+</mat-menu>
+
+<mat-menu #Group="matMenu">
+    <button mat-menu-item>Agregar un grupo</button>
+    <button mat-menu-item>Visualizar grupos</button>
+</mat-menu>
+
+<mat-menu #Card="matMenu">
+    <button mat-menu-item>Agregar tarjeta RFID</button>
+    <button mat-menu-item>Visualizar tarjetas RFID</button>
+</mat-menu>

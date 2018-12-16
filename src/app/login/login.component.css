@@ -20,7 +20,7 @@
 }
 
 mat-drawer{
-    background-color:#058E8E;
+    background-color:#2A9D8F;
 }
 
 .logo{
@@ -62,7 +62,7 @@ mat-form-field{
 }
 
 button{
-    background-color: #2E8EC5;
+    background-color: #264653;
     color: white;
     position: absolute;
     font-size: 20px;
