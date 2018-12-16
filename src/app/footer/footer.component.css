@@ -1,8 +1,5 @@
 *{
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
+    position: relative;
     background-color: blue;
-    height: 15vh;
+    height: 16vh;
 }
