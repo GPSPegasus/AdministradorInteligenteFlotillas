@@ -13,7 +13,6 @@ mat-toolbar{
 
 #menu{
     color: white;
-    
 }
 
 img{
@@ -22,7 +21,9 @@ img{
     margin-left: 100px;
 }
 
-img:focus {outline:0;}
+img:focus{
+    outline:0;
+}
 
 @media only screen and (max-width: 750px){
     img{

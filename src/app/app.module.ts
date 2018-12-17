@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
@@ -15,6 +16,8 @@ import { FooterComponent } from './footer/footer.component';
 import { CreateVehicleOwnerComponent } from './create-vehicle-owner/create-vehicle-owner.component';
 
 import { MatSidenavModule, MatInputModule, MatExpansionModule, MatMenuModule, MatToolbarModule, MatIconModule} from  '@angular/material';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { VehiclesComponent } from './vehicles/vehicles.component';
 
 const appRoutes: Routes = [
     { path: '', component: LoginComponent },
@@ -29,7 +32,9 @@ const appRoutes: Routes = [
         HomeComponent,
         HeaderComponent,
         FooterComponent,
-        CreateVehicleOwnerComponent
+        CreateVehicleOwnerComponent,
+        CreateVehicleComponent,
+        VehiclesComponent
     ],
     imports: [
         BrowserModule,
@@ -40,6 +45,7 @@ const appRoutes: Routes = [
         MatSidenavModule,
         MatExpansionModule,
         MatInputModule,
+        HttpClientModule,
         MatMenuModule,
         MatToolbarModule,
         MatIconModule

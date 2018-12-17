@@ -8,7 +8,6 @@
     height: 95vh;
 }
 
-
 .form{
     position: absolute;
     margin-top: 20px;
@@ -48,14 +47,54 @@ h1{
     height: 10%;
     background-color: #264653;
     color: white;
-    /*Border*/
     border-radius: 15px;
     border-color: #264653;
 }
 
+.btn-add-vehicle:active{
+    background-color:#00E676;
+    transform: translateY(4px);
+}
 
-button:focus {outline:0;}
+button:focus{
+    outline:0;
+}
 
+.btn-options{
+    cursor: pointer;
+    width: 100% !important;
+    margin-left: 0px !important;
+    margin-top: 5px !important;
+    border:0px;
+    padding: 5px 5px 5px 5px;
+    background-color: #E0E0E0;
+}
+
+.btn-options:active{
+    padding: 8px 8px 8px 8px;
+}
+
+mat-expansion-panel{
+    color: #E0E0E0;
+    background-color: #424242;;
+}
+
+mat-drawer{
+    background-color: #212121;
+}
+
+@media only screen and (max-width:1000px){
+    .container{
+        height: 120vh;
+        margin-bottom: 100px;
+    }
+
+    .form{
+        margin-top: 40px;
+        width: 80%;
+    }
+}
+    
 @media only screen and (max-width: 750px){
     .form{
         width: 60%;

@@ -11,6 +11,7 @@
     right: 0px;
     left: 0px;
 }
+
 .container-login-desk{
     position: relative;
     margin-top: 20%;
@@ -22,7 +23,6 @@ mat-drawer{
     background-color:#2A9D8F;
 }
 
-
 .logo{
     position: relative;
     text-align: center;
@@ -33,6 +33,7 @@ mat-drawer{
     display: block;
     text-align: center;
 }
+
 .otherSide{
     position: absolute;
     background-color: #E0E0E0;
@@ -66,19 +67,18 @@ button{
     left: 50%;
     transform: translate(-50%);
     width: 60%;
-
     border: 0px;
     border-radius: 20px;
     padding: 10px 10px 10px 10px;
-
 }
 
-button:active {
+button:active{
     transform: translate(-50%, 6px);
 }
 
-button:focus {outline:0;}
-
+button:focus{
+    outline:0;
+}
 
 .input{
     border-style: solid;
@@ -86,7 +86,7 @@ button:focus {outline:0;}
     border-width: 5px;
 }
 
-@media only screen and (max-width:800px) {
+@media only screen and (max-width:800px){
     mat-drawer{
         position: absolute;
         left: 0px;
@@ -105,5 +105,4 @@ button:focus {outline:0;}
     .input-login{
         margin-top: 50px;
     }
-
 }
