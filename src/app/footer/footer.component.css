@@ -1,11 +1,5 @@
 *{
     position: relative;
     background-color: blue;
-    height: 20vh;
-}
-
-@media only screen and (max-height: 500px){
-    *{
-        height: 40vh;
-    }
+    height: 10vh;
 }
