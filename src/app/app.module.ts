@@ -41,7 +41,7 @@ const appRoutes: Routes = [
         MatSidenavModule,
         MatExpansionModule,
         MatInputModule,
-        HttpClientModule
+        HttpClientModule,
         MatMenuModule,
         MatToolbarModule,
         MatIconModule
