@@ -98,6 +98,10 @@ button:focus {outline:0;}
         width: 100%;
     }
 
+    button{
+        margin-bottom: 20px;
+    }
+
     .input-login{
         margin-top: 50px;
     }
