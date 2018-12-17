@@ -60,7 +60,6 @@ button:focus{
     outline:0;
 }
 
-<<<<<<< HEAD
 .btn-options{
     cursor: pointer;
     width: 100% !important;
@@ -82,18 +81,20 @@ mat-expansion-panel{
 
 mat-drawer{
     background-color: #212121;
+}
 
-    @media only screen and (max-width:1000px){
-        .container{
-            height: 120vh;
-            margin-bottom: 100px;
-        }
+@media only screen and (max-width:1000px){
+    .container{
+        height: 120vh;
+        margin-bottom: 100px;
+    }
 
-        .form{
-            margin-top: 40px;
-            width: 80%;
-        }
-=======
+    .form{
+        margin-top: 40px;
+        width: 80%;
+    }
+}
+    
 @media only screen and (max-width: 750px){
     .form{
         width: 60%;
@@ -103,6 +104,5 @@ mat-drawer{
 @media only screen and (max-width: 500px){
     .form{
         width: 90%;
->>>>>>> origin/devFronted
     }
 }
