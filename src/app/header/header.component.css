@@ -1,6 +1,7 @@
 mat-toolbar{
+    position: relative;
     background-color: #2A9D8F;
-    height: 9vh;
+    height: 10vh;
 }
 
 .options{
