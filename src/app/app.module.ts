@@ -15,7 +15,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CreateVehicleOwnerComponent } from './create-vehicle-owner/create-vehicle-owner.component';
 
-import { MatSidenavModule, MatInputModule, MatExpansionModule, MatMenuModule, MatToolbarModule, MatIconModule} from  '@angular/material';
+import { MatSidenavModule, MatInputModule, MatExpansionModule, MatMenuModule, MatToolbarModule, MatIconModule, MatTableModule, MatPaginatorModule} from  '@angular/material';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 
@@ -23,7 +23,8 @@ const appRoutes: Routes = [
     { path: '', component: LoginComponent },
     { path: 'home', component: HomeComponent },
     { path: 'create-vehicle-owner', component: CreateVehicleOwnerComponent },
-    { path: 'create-vehicle', component: CreateVehicleComponent }
+    { path: 'create-vehicle', component: CreateVehicleComponent },
+    { path: 'vehicles', component: VehiclesComponent }
 ];
 
 @NgModule({
@@ -49,7 +50,9 @@ const appRoutes: Routes = [
         HttpClientModule,
         MatMenuModule,
         MatToolbarModule,
-        MatIconModule
+        MatIconModule,
+        MatTableModule,
+        MatPaginatorModule
     ],
     providers: [],
     bootstrap: [AppComponent]
