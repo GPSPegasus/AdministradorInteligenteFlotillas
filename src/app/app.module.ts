@@ -23,6 +23,7 @@ const appRoutes: Routes = [
     { path: '', component: LoginComponent },
     { path: 'home', component: HomeComponent },
     { path: 'create-vehicle-owner', component: CreateVehicleOwnerComponent },
+    { path: 'create-vehicle', component: CreateVehicleComponent }
 ];
 
 @NgModule({
