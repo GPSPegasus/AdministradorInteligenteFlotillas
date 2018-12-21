@@ -16,7 +16,16 @@ export class LoginComponent implements OnInit {
 
 	constructor(private userService: UserService, private router: Router) { 
 		if(localStorage.getItem('access_token')) {
-			this.router.navigate(['home']);
+			this.userService.getUser(localStorage.getItem('access_token'))
+			.subscribe(
+				(response) => {
+					this.router.navigate(['home']);
+				}, 
+				(error) => { 
+					localStorage.removeItem('access_token');
+					alert('La sesión expiró, inicie sesión nuevamente'); 
+				}
+			);
 		}
 	}
 
@@ -31,8 +40,20 @@ export class LoginComponent implements OnInit {
 				localStorage.setItem('access_token', response.access_token);
 				this.router.navigate(['home']);
 			}, 
-			(error: any) => { 
-				alert("Usuario y/o contraseña incorrectos"); 
+			(error) => { 
+				alert('Usuario y/o contraseña incorrectos'); 
+			}
+		);
+	}
+
+	addUser() {
+		this.userService.createUser("name", this.email, this.password, this.password)
+		.subscribe(
+			(response) => { 
+				alert('Usuario creado exitosamente')
+			}, 
+			(error) => { 
+				console.log('No se pudo crear el usuario, intente nuevamente');
 			}
 		);
 	}

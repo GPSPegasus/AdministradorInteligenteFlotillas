@@ -31,7 +31,8 @@ h3{
 .select {
     text-align: center;
     text-align-last: center;
-  }
+}
+
 .option {
     text-align: left;
 }
@@ -59,12 +60,9 @@ button:focus{
     .form{
         width: 80%;
     }
-
-
 }
 
 @media only screen and (max-width: 500px){
-
     .form{
         width: 90%;
         height: 300px;
@@ -72,7 +70,6 @@ button:focus{
 }
 
 @media only screen and (max-height: 450px){
-
     .container{
         height: 400px;
     }
@@ -81,4 +78,3 @@ button:focus{
         height: 300px;
     }
 }
-

@@ -14,10 +14,11 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CreateVehicleOwnerComponent } from './create-vehicle-owner/create-vehicle-owner.component';
-
-import { MatSidenavModule, MatInputModule, MatExpansionModule, MatMenuModule, MatToolbarModule, MatIconModule, MatTableModule, MatPaginatorModule} from  '@angular/material';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
+
+import { MatSidenavModule, MatInputModule, MatExpansionModule, MatMenuModule } from  '@angular/material';
+import { MatToolbarModule, MatIconModule, MatTableModule, MatPaginatorModule } from  '@angular/material';
 
 const appRoutes: Routes = [
     { path: '', component: LoginComponent },

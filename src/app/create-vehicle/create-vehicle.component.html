@@ -1,20 +1,17 @@
 <div class="container">
-  <div class="form">
-    <h3>Agregar nuevo vehiculo</h3>
-    <mat-form-field class="input" style="margin: 4% 0px 0px 0px">
-      <input matInput placeholder="IMEI" required > 
-    </mat-form-field>
-    <mat-form-field class="input">
-        <select matNativeControl required class="select">
-          <option class="option" value="volvo">Volvo</option>
-          <option class="option" value="saab">Saab</option>
-          <option class="option" value="mercedes">Mercedes</option>
-          <option class="option" value="audi">Audi</option>
-        </select>
-    </mat-form-field>
-    <mat-form-field class="input">
-      <input matInput placeholder="ID contador" required > 
-    </mat-form-field>
-    <button mat-button class="btn-add-vehicle">Agregar</button>
-  </div>
+    <div class="form">
+        <h3>Agregar nuevo vehiculo</h3>
+        <mat-form-field class="input" style="margin: 4% 0px 0px 0px">
+            <input matInput placeholder="IMEI" required [(ngModel)]="imei"> 
+        </mat-form-field>
+        <mat-form-field class="input">
+            <select matNativeControl required class="select" placeholder="Propietario" [(ngModel)]="vehicleOwnerId">
+                <option *ngFor="let vehicleOwner of vehicleOwners" class="option" value="{{ vehicleOwner.id }}">{{ vehicleOwner.name }}</option>
+            </select>
+        </mat-form-field>
+        <mat-form-field class="input">
+            <input matInput placeholder="ID contador" required [(ngModel)]="deviceCountId"> 
+        </mat-form-field>
+        <button mat-button class="btn-add-vehicle" (click)="addVehicle()">Agregar</button>
+    </div>
 </div>

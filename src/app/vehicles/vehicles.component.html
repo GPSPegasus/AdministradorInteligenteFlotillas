@@ -1,42 +1,35 @@
 <div class="container">
-  <mat-toolbar>
-    <h3>Vehiculos</h3>
-    <div class="options">
-      <mat-icon >directions_bus</mat-icon>
-      <button>Agregar vehiculo</button>
-    </div>
-  </mat-toolbar>
+    <mat-toolbar>
+        <h3>Vehículos</h3>
+        <div class="options">
+            <mat-icon >directions_bus</mat-icon>
+            <button routerLink="/create-vehicle">Agregar vehículo</button>
+        </div>
+    </mat-toolbar>
 </div>
 <div class="mat-elevation-z8 container-table">
-    <table mat-table [dataSource]="dataSource">
-  
-      <!-- Position Column -->
-      <ng-container matColumnDef="position">
-        <th mat-header-cell *matHeaderCellDef> No. </th>
-        <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-      </ng-container>
-  
-      <!-- Name Column -->
-      <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef> Name </th>
-        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-      </ng-container>
-  
-      <!-- Weight Column -->
-      <ng-container matColumnDef="weight">
-        <th mat-header-cell *matHeaderCellDef> Weight </th>
-        <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
-      </ng-container>
-  
-      <!-- Symbol Column -->
-      <ng-container matColumnDef="symbol">
-        <th mat-header-cell *matHeaderCellDef> Symbol </th>
-        <td mat-cell *matCellDef="let element"> <button class="btn-active">{{element.symbol}}</button>  </td>
-      </ng-container>
-  
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    <table mat-table [dataSource]="vehicles">
+        <ng-container matColumnDef="imei">
+            <th mat-header-cell *matHeaderCellDef>IMEI</th>
+            <td mat-cell *matCellDef="let vehicle">{{ vehicle.imei }}</td>
+        </ng-container>
+        <ng-container matColumnDef="vehicle_owner">
+            <th mat-header-cell *matHeaderCellDef>Propietario</th>
+            <td mat-cell *matCellDef="let vehicle">{{ vehicle.owner_vehicle_id }}</td>
+        </ng-container>
+        <ng-container matColumnDef="device_count_id">
+            <th mat-header-cell *matHeaderCellDef>Contador</th>
+            <td mat-cell *matCellDef="let vehicle">{{ vehicle.device_count_id }}</td>
+        </ng-container>
+        <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef>Estado</th>
+            <td mat-cell *matCellDef="let vehicle">
+                <button class="btn-active" *ngIf="vehicle.status_vehicle == 1" (click)="changeVehicleStatus(vehicle)">Activo</button>
+                <button class="btn-active" *ngIf="vehicle.status_vehicle == 0" (click)="changeVehicleStatus(vehicle)">Inactivo</button>
+            </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
-  
     <mat-paginator [pageSizeOptions]="[5]"></mat-paginator>
-  </div>
+</div>

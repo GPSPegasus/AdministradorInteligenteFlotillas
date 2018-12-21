@@ -6,7 +6,7 @@ import { HttpHeaders } from '@angular/common/http';
   	providedIn: 'root'
 })
 export class UserService {
-	url: string = 'http://127.0.0.1:8000/api/'
+	url: string = 'http://127.0.0.1:8000/api/';
 
   	constructor(private http: HttpClient) { 
 
@@ -17,8 +17,23 @@ export class UserService {
 		return this.http.post(this.url + 'auth/login', {email, password, remember_me}, {headers: headers});
 	}
 
-	createVehicleOwner(name: string, email: string, password: string, access_token: string) {
+	createUser(name: string, email: string, password: string, password_confirmation: string) {
+		const headers = new HttpHeaders({'Content-Type': 'application/json'});
+		return this.http.put(this.url + 'auth/signup', {name: name, email: email, password: password, password_confirmation: password_confirmation}, {headers: headers});
+	}
+
+	getUser(access_token: string) {
 		const headers = new HttpHeaders({'Authorization': 'Bearer ' + access_token});
-		return this.http.post(this.url + 'auth/admin/create_Owner_Vehicle', {name, email, password}, {headers: headers});
+		return this.http.get(this.url + 'auth/user', {headers: headers});
+	}
+
+	createVehicleOwner(access_token: string, name: string, email: string, password: string) {
+		const headers = new HttpHeaders({'Authorization': 'Bearer ' + access_token});
+		return this.http.put(this.url + 'auth/admin/create_Owner_Vehicle', {name: name, email: email, password: password}, {headers: headers});
+	}
+
+	getVehicleOwners(access_token: string) {
+		const headers = new HttpHeaders({'Authorization': 'Bearer ' + access_token});
+		return this.http.get(this.url + 'auth/admin/getAll_OwnerVehicle', {headers: headers});
 	}
 }

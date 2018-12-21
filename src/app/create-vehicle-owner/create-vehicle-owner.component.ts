@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { UserService } from '../services/user.service';
 
@@ -12,7 +13,7 @@ export class CreateVehicleOwnerComponent implements OnInit {
 	email: string = null;
 	password: string = null;
 
-  	constructor(private userService: UserService) { 
+  	constructor(private userService: UserService, private router: Router) { 
 
   	}
 
@@ -21,13 +22,23 @@ export class CreateVehicleOwnerComponent implements OnInit {
   	}
 
   	addVehicleOwner() {
-  		this.userService.createVehicleOwner(this.name, this.email, this.password, localStorage.getItem('access_token'))
+  		this.userService.createVehicleOwner(localStorage.getItem('access_token'), this.name, this.email, this.password)
 		.subscribe(
-			(response: any) => { 
+			(response) => { 
 				alert('Cuenta de propietario creada exitosamente')
 			}, 
-			(error: any) => { 
-				alert("No se pudo crear la cuenta, intente nuevamente"); 
+			(error) => { 
+				this.userService.getUser(localStorage.getItem('access_token'))
+				.subscribe(
+					(response) => {
+						alert('No se pudo crear la cuenta, intente nuevamente'); 
+					}, 
+					(error) => { 
+						localStorage.removeItem('access_token');
+						alert('La sesión expiró, inicie sesión nuevamente'); 
+						this.router.navigate(['']);
+					}
+				);
 			}
 		);
   	}
